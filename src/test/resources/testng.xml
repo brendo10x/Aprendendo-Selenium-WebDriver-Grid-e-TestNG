@@ -1,0 +1,21 @@
+<!--Esta suite irá ser exutada com 2 testes em paralelo, pois em sua tag 
+	está as opções parallel="tests" e thread-cont="2" -->
+<suite name="Suite de teste" parallel="tests" thread-count="2">
+	<!--Comentário -->
+
+	<test name="Teste na primeira máquina">
+		<parameter name="entradaParametro" value="2" />
+		<classes>
+			<class
+				name="br.com.aprendendo.selenium.testepaginas.TestePaginaConversorTemperatura" />
+		</classes>
+	</test>
+	
+	<test name="Teste na segunda máquina">
+		<parameter name="nomeParametro" value="Brendo Felipe" />
+		<classes>
+			<class
+				name="br.com.aprendendo.selenium.testepaginas.TestePaginaTrabalheConosco" />
+		</classes>
+	</test>
+</suite>
