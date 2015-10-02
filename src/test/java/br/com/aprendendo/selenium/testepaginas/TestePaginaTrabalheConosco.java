@@ -42,7 +42,7 @@ public class TestePaginaTrabalheConosco {
 		// testar esta classe no seu computador
 		/**
 		 * driver =
-		 * selecionadoTipoDriver.obterObjetoWebDriver(desiredCapabilities);
+		 * selecionadoTipoDriver.obterObjetoWebDriver(capacidadesDesejadas);
 		 */
 	}
 

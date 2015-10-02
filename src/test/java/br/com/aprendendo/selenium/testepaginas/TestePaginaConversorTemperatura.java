@@ -53,7 +53,7 @@ public class TestePaginaConversorTemperatura {
 		// testar esta classe no seu computador.
 		/**
 		 * driver = selecionadoTipoDriver
-		 * .obterObjetoWebDriver(desiredCapabilities);
+		 * .obterObjetoWebDriver(capacidadesDesejadas);
 		 * */
 	}
 
