@@ -14,7 +14,6 @@ import br.com.aprendendo.seleniumwebdriveregrid.fabricaobjetopagina.PaginaTrabal
 
 //Esta classe tem como objetivo executar os testes funcionais na página trabalhe conosco
 //(http://artigo.pe.hu/?pg=trabalhe_conosco.php) da aplicação web   
-
 public class TestePaginaTrabalheConosco {
 	// Declaração de variável
 	WebDriver driver;
@@ -24,23 +23,23 @@ public class TestePaginaTrabalheConosco {
 	@BeforeClass
 	public void inicializarDriver() throws Exception {
 
-		// Atribuição da instância do Enum do Tipo Firefox
+		// Atribuição da instância do Enum do Tipo driver Firefox
 		TipoDriver selectedDriverType = TipoDriver.FIREFOX;
 
-		// Atribuição das capacidades para usar o tipo driver(Firefox)
+		// Atribuição das capacidades para usar o tipo driver Firefox
 		DesiredCapabilities desiredCapabilities = selectedDriverType
 				.obterDesiredCapabilities();
 
 		// Atribuição do WebDriver remoto, com as definições de que os testes
-		// funcionais desta classe serão executados no navegador Google Chrome
-		// do Node http://192.168.0.9:5555/wd/hub (1º máquina virtual usando
+		// funcionais desta classe serão executados no navegador Firefox
+		// do Node 1 http://192.168.0.9:5555/wd/hub (1º máquina virtual usando
 		// Linux)
 		driver = selectedDriverType.obterObjetoWebDriverRemoto(
 				desiredCapabilities, Platform.LINUX,
-				"http://192.168.0.9:5555/wd/hub");
+				"http://192.168.0.14:5555/wd/hub");
 
-		// Descomente este trecho de código e comente o de cima caso deseje
-		// testar esta classe no seu computador.
+		// Descomente este trecho de código abaixo e comente o de cima caso deseje
+		// testar esta classe no seu computador
 		/**
 		 * driver =
 		 * selectedDriverType.obterObjetoWebDriver(desiredCapabilities);
@@ -50,7 +49,7 @@ public class TestePaginaTrabalheConosco {
 	// Último método que executa, pois está anotado com @AfterClass do TestNG
 	@AfterClass
 	public void fecharDriver() {
-		// Verifica se o driver é diferente null
+	// Verifica se o driver é diferente null
 		if (null != driver) {
 			// Se for, fecha o driver, ou seja o navegador que está em execução
 			// será fechado
@@ -59,7 +58,7 @@ public class TestePaginaTrabalheConosco {
 	}
 
 	// Definição de parâmetro que este método receberá, a partir do arquivo do
-	// tesng.xml (TestNG) declarado neste projeto
+	// testng.xml (do TestNG) declarado neste projeto
 	@Parameters({ "nomeParametro" })
 	// Executa o método como teste
 	@Test

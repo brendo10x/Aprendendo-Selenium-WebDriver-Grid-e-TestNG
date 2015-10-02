@@ -57,10 +57,10 @@ public class PaginaTrabalheConosco {
 
 	// Implementação do construtor
 	public PaginaTrabalheConosco(WebDriver driver) {
-		// Atribuição do parametro que tem instância do WebDriver, para o objeto
+		// Atribuição do parâmetro que tem instância do WebDriver, para o objeto
 		// WebDriver que tem o escopo desta classe
 		this.driver = driver;
-		// Permite que os atributos mapeados nesta classe com @FindBy sejão
+		// Permite que os atributos mapeados nesta classe com @FindBy sejam
 		// carregados com os elementos html correspondente
 		PageFactory.initElements(this.driver, this);
 		// Carrega e inicia o navegador com o endereço web

@@ -43,19 +43,19 @@ public class TestePaginaConversorTemperatura {
 
 		// Atribuição do WebDriver remoto, com as definições de que os testes
 		// funcionais desta classe serão executados no navegador Google Chrome
-		// do Node http://192.168.0.2:5555/wd/hub (2º máquina virtual usando
+		// do Node 2 http://192.168.0.2:5555/wd/hub (2º máquina virtual usando
 		// Linux)
+
 		driver = selecionadoTipoDriver.obterObjetoWebDriverRemoto(
 				desiredCapabilities, Platform.LINUX,
-				"http://192.168.0.2:5555/wd/hub");
+				"http://192.168.0.15:5555/wd/hub");
 
 		// Descomente este trecho de código e comente o de cima caso deseje
 		// testar esta classe no seu computador.
 		/**
-		 * driver =
-		 * selectedDriverType.obterObjetoWebDriver(desiredCapabilities);
-		 */
-
+		 * driver = selecionadoTipoDriver
+		 * .obterObjetoWebDriver(desiredCapabilities);
+		 * */
 	}
 
 	// Último método que executa, pois está anotado com @AfterClass do TestNG
@@ -113,7 +113,7 @@ public class TestePaginaConversorTemperatura {
 
 		// Verifica se são iguais, o resultado com o esperado (valor de entrada)
 		Assert.assertEquals(resultado.getAttribute("value"),
-				Double.parseDouble(entrada.getAttribute("value")));
+				entrada.getAttribute("value"));
 
 	}
 
@@ -132,8 +132,8 @@ public class TestePaginaConversorTemperatura {
 		resultadoValor = resultado.getAttribute("value");
 
 		// Atribui o resultado da conversão
-		resultadoCalculado = ConversorTemperatura
-				.celsiusParaFahrenheit(resultadoValor);
+		resultadoCalculado = ConversorTemperatura.celsiusParaFahrenheit(entrada
+				.getAttribute("value"));
 
 		// Verifica se são iguais, o resultado com o esperado
 		Assert.assertEquals(resultadoValor, resultadoCalculado);

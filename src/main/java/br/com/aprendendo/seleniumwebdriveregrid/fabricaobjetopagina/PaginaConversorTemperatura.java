@@ -37,7 +37,7 @@ public class PaginaConversorTemperatura {
 
 	// Implementação do construtor
 	public PaginaConversorTemperatura(WebDriver driver) {
-		// Atribuição do parametro que tem instância do WebDriver, para o objeto
+		// Atribuição do parâmetro que tem instância do WebDriver, para o objeto
 		// WebDriver que tem o escopo desta classe
 		this.driver = driver;
 		// Permite que os atributos mapeados nesta classe com @FindBy sejam

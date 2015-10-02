@@ -9,8 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//Esta classe tem como objetivo fazer referência a Página Início (http://artigo.pe.hu)
-//da aplicação web, a qual será utilizada nos testes.                                  
+//Esta classe tem como objetivo fazer referência a Página Início da aplicação (http://artigo.pe.hu).                               
 public class PaginaInicio {
 
 	// Mapeamento entre o objeto WebElement com o elemento html que tem o
@@ -50,9 +49,8 @@ public class PaginaInicio {
 		// definido também o tempo de espera, ou seja 10 segundos
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
-		// Clique no menu Conversor na aplicação web
-		acoesAvancadasDeUsuario.moveToElement(menuOpcaoConversor).click()
-				.perform();
+		// Passa o mouse em cima do menu Conversor na aplicação web
+		acoesAvancadasDeUsuario.moveToElement(menuOpcaoConversor).perform();
 
 		// Depois, espere no máximo 10 segundos(se passar disso lance um
 		// exception) até que os itens do menu Conversor apareçam
@@ -67,7 +65,7 @@ public class PaginaInicio {
 
 		// As ações acima ocorrem em tempo real na aplicação web
 
-		// E para satisfazer o retorno do método, retorne o objeto da classe
+		// E para satisfazer o retorno do método, retorna o objeto da classe
 		// PaginaConversorTemperatura com o driver corrente
 		return new PaginaConversorTemperatura(driver);
 

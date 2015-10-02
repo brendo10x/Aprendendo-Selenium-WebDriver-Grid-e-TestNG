@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 //Este enum tem como objetivo fornecer tipos de enums que tem implementado métodos úteis
 //para a chamada de instâncias de WebDriver's (Firefox e Chrome)
+
 public enum TipoDriver implements EstabelecerDriver {
 
 	FIREFOX {
@@ -84,7 +85,7 @@ public enum TipoDriver implements EstabelecerDriver {
 			return new ChromeDriver(capabilities);
 		}
 
-		// Este método retorna um objeto remoto
+		// Este método retorna um objeto WebDriver remoto
 		public WebDriver obterObjetoWebDriverRemoto(
 				DesiredCapabilities capabilities, Platform plataforma,
 				String enderecoRemoto) {

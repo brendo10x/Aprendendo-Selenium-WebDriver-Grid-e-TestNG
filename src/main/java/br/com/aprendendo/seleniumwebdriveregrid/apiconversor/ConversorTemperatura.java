@@ -27,8 +27,8 @@ public class ConversorTemperatura {
 		// Atribui o valor em Double convertida de uma String
 		valor = Double.parseDouble(celsius);
 		// Retorna uma String convertida de um valor Double onde lhe foi
-		// aplicado uma escala
-		return String.valueOf(aplicarScala(1.8 * valor + 32.0));
+		// aplicado uma escala 
+		return String.valueOf(aplicarScala((1.8 * valor) + 32.0));
 	}
 
 	// Conversão do valor de Fahrenheit para Celsius
