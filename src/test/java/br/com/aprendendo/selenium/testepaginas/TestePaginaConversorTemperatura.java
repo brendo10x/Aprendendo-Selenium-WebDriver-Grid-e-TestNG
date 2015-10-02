@@ -45,7 +45,6 @@ public class TestePaginaConversorTemperatura {
 		// funcionais desta classe serão executados no navegador Google Chrome
 		// do Node 2 http://192.168.0.2:5555/wd/hub (2º máquina virtual usando
 		// Linux)
-
 		driver = selecionadoTipoDriver.obterObjetoWebDriverRemoto(
 				desiredCapabilities, Platform.LINUX,
 				"http://192.168.0.2:5555/wd/hub");
@@ -106,7 +105,7 @@ public class TestePaginaConversorTemperatura {
 	@Test(dependsOnMethods = { "testeCalcularConversorTemperatura" })
 	public void testeCelsiusParaCelsius() {
 
-		// Esses dois primeiros métodos, selecinam a opção do elemento
+		// Esses dois primeiros métodos, selecionam a opção do elemento
 		// html Select que tiver com x texto vísivel na aplicação web.
 		selectDe.selectByVisibleText("Celsius [°C]");
 		selectPara.selectByVisibleText("Celsius [°C]");
@@ -124,11 +123,11 @@ public class TestePaginaConversorTemperatura {
 	public void testeCelsiusParaFahrenheit() {
 
 		// Esses dois primeiros métodos, selecinam a opção do elemento
-		// html Select que tiver com x texto vísivel na aplicação web.
+		// html Select que tiver com x texto visível na aplicação web.
 		selectDe.selectByVisibleText("Celsius [°C]");
 		selectPara.selectByVisibleText("Fahrenheit [°F]");
 
-		// Atribui o valor do atribuito value do elemento html
+		// Atribui o valor do atributo value do elemento html
 		resultadoValor = resultado.getAttribute("value");
 
 		// Atribui o resultado da conversão
@@ -146,12 +145,12 @@ public class TestePaginaConversorTemperatura {
 	@Test(dependsOnMethods = "testeCalcularConversorTemperatura")
 	public void testeFahrenheitParaCelsius() {
 
-		// Esses dois primeiros métodos, selecinam a opção do elemento
+		// Esses dois primeiros métodos, selecionam a opção do elemento
 		// html Select que tiver com x texto vísivel na aplicação web.
 		selectDe.selectByVisibleText("Fahrenheit [°F]");
 		selectPara.selectByVisibleText("Celsius [°C]");
 
-		// Atribui o valor do atribuito value do elemento html
+		// Atribui o valor do atributo value do elemento html
 		resultadoValor = resultado.getAttribute("value");
 
 		// Atribui o resultado da conversão
@@ -169,8 +168,8 @@ public class TestePaginaConversorTemperatura {
 	@Test(dependsOnMethods = { "testeCalcularConversorTemperatura" })
 	public void testeFahrenheitParafahrenheit() {
 
-		// Esses dois primeiros métodos, selecinam a opção do elemento
-		// html Select que tiver com x texto vísivel na aplicação web.
+		// Esses dois primeiros métodos, selecionam a opção do elemento
+		// html Select que tiver com x texto visível na aplicação web.
 		selectDe.selectByVisibleText("Fahrenheit [°F]");
 		selectPara.selectByVisibleText("Fahrenheit [°F]");
 

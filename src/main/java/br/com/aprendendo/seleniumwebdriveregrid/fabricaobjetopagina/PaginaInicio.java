@@ -62,7 +62,7 @@ public class PaginaInicio {
 		// de Temperatura
 		acoesAvancadasDeUsuario.moveToElement(menuOpcaoConversorTemperatura)
 				.click().perform();
-
+		
 		// As ações acima ocorrem em tempo real na aplicação web
 
 		// E para satisfazer o retorno do método, retorna o objeto da classe
