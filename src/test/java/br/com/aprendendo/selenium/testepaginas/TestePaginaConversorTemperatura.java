@@ -34,11 +34,11 @@ public class TestePaginaConversorTemperatura {
 	@BeforeClass
 	public void inicializarDriver() throws Exception {
 
-		// Atribuição da instância do Enum do Tipo Chrome
+		// Atribuição da instância do Enum do tipo driver Chrome
 		TipoDriver selecionadoTipoDriver = TipoDriver.CHROME;
 
-		// Atribuição das capacidades para usar o tipo driver(Chrome)
-		DesiredCapabilities desiredCapabilities = selecionadoTipoDriver
+		// Atribuição das capacidades para usar o tipo driver Chrome
+		DesiredCapabilities capacidadesDesejadas = selecionadoTipoDriver
 				.obterDesiredCapabilities();
 
 		// Atribuição do WebDriver remoto, com as definições de que os testes
@@ -46,7 +46,7 @@ public class TestePaginaConversorTemperatura {
 		// do Node 2 http://192.168.0.2:5555/wd/hub (2º máquina virtual usando
 		// Linux)
 		driver = selecionadoTipoDriver.obterObjetoWebDriverRemoto(
-				desiredCapabilities, Platform.LINUX,
+				capacidadesDesejadas, Platform.LINUX,
 				"http://192.168.0.2:5555/wd/hub");
 
 		// Descomente este trecho de código e comente o de cima caso deseje
