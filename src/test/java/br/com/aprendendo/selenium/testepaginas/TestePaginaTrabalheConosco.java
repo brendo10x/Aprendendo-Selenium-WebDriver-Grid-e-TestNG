@@ -24,17 +24,17 @@ public class TestePaginaTrabalheConosco {
 	public void inicializarDriver() throws Exception {
 
 		// Atribuição da instância do Enum do Tipo driver Firefox
-		TipoDriver selectedDriverType = TipoDriver.FIREFOX;
+		TipoDriver selecionadoTipoDriver = TipoDriver.FIREFOX;
 
 		// Atribuição das capacidades para usar o tipo driver Firefox
-		DesiredCapabilities desiredCapabilities = selectedDriverType
+		DesiredCapabilities desiredCapabilities = selecionadoTipoDriver
 				.obterDesiredCapabilities();
 
 		// Atribuição do WebDriver remoto, com as definições de que os testes
 		// funcionais desta classe serão executados no navegador Firefox
 		// do Node 1 http://192.168.0.9:5555/wd/hub (1º máquina virtual usando
 		// Linux)
-		driver = selectedDriverType.obterObjetoWebDriverRemoto(
+		driver = selecionadoTipoDriver.obterObjetoWebDriverRemoto(
 				desiredCapabilities, Platform.LINUX,
 				"http://192.168.0.9:5555/wd/hub");
 
@@ -42,7 +42,7 @@ public class TestePaginaTrabalheConosco {
 		// testar esta classe no seu computador
 		/**
 		 * driver =
-		 * selectedDriverType.obterObjetoWebDriver(desiredCapabilities);
+		 * selecionadoTipoDriver.obterObjetoWebDriver(desiredCapabilities);
 		 */
 	}
 
