@@ -13,5 +13,5 @@ public interface EstabelecerDriver {
 			DesiredCapabilities desiredCapabilities, Platform plataforma,
 			String enderecoRemoto);
 
-	DesiredCapabilities obterDesiredCapabilities();
+	DesiredCapabilities obterCapacidadesDesejadas();
 }

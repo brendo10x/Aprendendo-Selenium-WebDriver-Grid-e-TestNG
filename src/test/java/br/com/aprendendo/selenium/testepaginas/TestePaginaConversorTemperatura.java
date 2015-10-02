@@ -39,7 +39,7 @@ public class TestePaginaConversorTemperatura {
 
 		// Atribuição das capacidades para usar o tipo driver Chrome
 		DesiredCapabilities capacidadesDesejadas = selecionadoTipoDriver
-				.obterDesiredCapabilities();
+				.obterCapacidadesDesejadas();
 
 		// Atribuição do WebDriver remoto, com as definições de que os testes
 		// funcionais desta classe serão executados no navegador Google Chrome

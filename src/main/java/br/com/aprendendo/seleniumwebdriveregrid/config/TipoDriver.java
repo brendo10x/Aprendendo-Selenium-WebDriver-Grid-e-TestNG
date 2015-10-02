@@ -19,7 +19,7 @@ public enum TipoDriver implements EstabelecerDriver {
 	FIREFOX {
 
 		// Este método retorna as capacidades para usar o Firefox
-		public DesiredCapabilities obterDesiredCapabilities() {
+		public DesiredCapabilities obterCapacidadesDesejadas() {
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 			return capabilities;
 		}
@@ -56,7 +56,7 @@ public enum TipoDriver implements EstabelecerDriver {
 	CHROME {
 
 		// // Este método retorna as capacidades para usar o Chrome
-		public DesiredCapabilities obterDesiredCapabilities() {
+		public DesiredCapabilities obterCapacidadesDesejadas() {
 			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 
 			// Inicio: Neste bloco de código, estamos definindo alguns comandos
