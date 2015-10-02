@@ -48,7 +48,7 @@ public class TestePaginaConversorTemperatura {
 
 		driver = selecionadoTipoDriver.obterObjetoWebDriverRemoto(
 				desiredCapabilities, Platform.LINUX,
-				"http://192.168.0.15:5555/wd/hub");
+				"http://192.168.0.2:5555/wd/hub");
 
 		// Descomente este trecho de código e comente o de cima caso deseje
 		// testar esta classe no seu computador.

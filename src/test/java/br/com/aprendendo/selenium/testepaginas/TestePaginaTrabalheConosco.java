@@ -36,7 +36,7 @@ public class TestePaginaTrabalheConosco {
 		// Linux)
 		driver = selectedDriverType.obterObjetoWebDriverRemoto(
 				desiredCapabilities, Platform.LINUX,
-				"http://192.168.0.14:5555/wd/hub");
+				"http://192.168.0.9:5555/wd/hub");
 
 		// Descomente este trecho de código abaixo e comente o de cima caso deseje
 		// testar esta classe no seu computador
